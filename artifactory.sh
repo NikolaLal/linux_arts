@@ -1,4 +1,8 @@
-sudo apt -y install openjdk-8-jre-headless
+# Install Java
+sudo apt-get -y update
+sudo apt-get install -y $1
+sudo apt-get -y update --fix-missing
+sudo apt-get install -y $1
 
 echo "deb https://jfrog.bintray.com/artifactory-debs xenial main" | sudo tee -a /etc/apt/sources.list
 
