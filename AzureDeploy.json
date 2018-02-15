@@ -11,15 +11,6 @@
         "openjdk-8-jdk"
       ]
     },
-    "tomcatPackageName": {
-      "type": "string",
-      "defaultValue": "tomcat7",
-      "allowedValues": [
-        "tomcat6",
-        "tomcat7",
-        "tomcat8"
-      ]
-    },
     "newStorageAccountName": {
       "type": "string",
       "metadata": {
