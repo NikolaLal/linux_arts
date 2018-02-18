@@ -1,3 +1,3 @@
 # Install Java
 
-echo "Hello"
+echo Hello
