@@ -11,15 +11,6 @@
         "openjdk-8-jdk"
       ]
     },
-    "tomcatPackageName": {
-      "type": "string",
-      "defaultValue": "tomcat7",
-      "allowedValues": [
-        "tomcat6",
-        "tomcat7",
-        "tomcat8"
-      ]
-    },
     "newStorageAccountName": {
       "type": "string",
       "metadata": {
@@ -201,7 +192,7 @@
           "fileUris": [
             "https://raw.githubusercontent.com/NikolaLal/linux_arts/master/artifactory.sh"
           ],
-          "commandToExecute": "[concat('sh artifactory.sh',' ',parameters('javaPackageName'),' ',parameters('tomcatPackageName'))]"
+          "commandToExecute": "[concat('sh artifactory.sh',' ',parameters('javaPackageName'))]"
         }
       }
     }
