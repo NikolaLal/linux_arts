@@ -1,3 +1,21 @@
+Skip to content
+This repository
+Search
+Pull requests
+Issues
+Marketplace
+Explore
+ @NikolaLal
+ Sign out
+ Watch 0
+  Star 0  Fork 0 NikolaLal/linux_tomcat
+ Code  Issues 0  Pull requests 0  Projects 0  Wiki  Insights  Settings
+Branch: master Find file Copy pathlinux_tomcat/azuredeploy.json
+dd21295  2 hours ago
+@NikolaLal NikolaLal Rename AzureDeploy.json to azuredeploy.json
+1 contributor
+RawBlameHistory     
+211 lines (209 sloc)  6.5 KB
 {
   "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
   "contentVersion": "1.0.0.0",
@@ -9,6 +27,15 @@
         "openjdk-6-jdk",
         "openjdk-7-jdk",
         "openjdk-8-jdk"
+      ]
+    },
+    "tomcatPackageName": {
+      "type": "string",
+      "defaultValue": "tomcat7",
+      "allowedValues": [
+        "tomcat6",
+        "tomcat7",
+        "tomcat8"
       ]
     },
     "newStorageAccountName": {
@@ -192,10 +219,22 @@
           "fileUris": [
             "https://raw.githubusercontent.com/NikolaLal/linux_arts/master/artifactory.sh"
           ],
-          "commandToExecute": "[concat('sh artifactory.sh',' ',parameters('javaPackageName'))]"
+          "commandToExecute": "[concat('sh artifactory.sh',' ',parameters('javaPackageName'),' ',parameters('tomcatPackageName'))]"
         }
       }
     }
   ]
 }
 
+© 2018 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+API
+Training
+Shop
+Blog
+About
